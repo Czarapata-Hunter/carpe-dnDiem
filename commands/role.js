@@ -21,6 +21,13 @@ const ROLES = {
   artificer: '1052287888856973393',
   bloodHunter: '1052288416991158404',
   cleric: '1052288892662984837',
+  monk: '1052288995213721701',
+  paladin: '1052289133403451392',
+  sorcerer: '1052289411791990876',
+  fighter: '1052289658429657229',
+  warlock: '1052289828579987476',
+  ranger: '1052289969521184790',
+  wizard: '1052290146982187149',
 };
 
 client.on('ready', async () => {
@@ -50,6 +57,38 @@ client.on('ready', async () => {
         new ButtonBuilder()
           .setCustomId('cleric')
           .setLabel('Cleric')
+          .setStyle(ButtonStyle.Primary)
+      ),
+      new ActionRowBuilder().setComponents(
+        new ButtonBuilder()
+          .setCustomId('monk')
+          .setLabel('Monk')
+          .setStyle(ButtonStyle.Primary),
+        new ButtonBuilder()
+          .setCustomId('paladin')
+          .setLabel('Paladin')
+          .setStyle(ButtonStyle.Primary),
+        new ButtonBuilder()
+          .setCustomId('sorcerer')
+          .setLabel('Sorcerer')
+          .setStyle(ButtonStyle.Primary),
+        new ButtonBuilder()
+          .setCustomId('fighter')
+          .setLabel('Fighter')
+          .setStyle(ButtonStyle.Primary),
+        new ButtonBuilder()
+          .setCustomId('warlock')
+          .setLabel('Warlock')
+          .setStyle(ButtonStyle.Primary)
+      ),
+      new ActionRowBuilder().setComponents(
+        new ButtonBuilder()
+          .setCustomId('ranger')
+          .setLabel('Ranger')
+          .setStyle(ButtonStyle.Primary),
+        new ButtonBuilder()
+          .setCustomId('wizard')
+          .setLabel('Wizard')
           .setStyle(ButtonStyle.Primary)
       ),
     ],
