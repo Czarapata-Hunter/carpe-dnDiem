@@ -11,7 +11,8 @@ const {
   ButtonStyle,
 } = require('discord.js');
 const { token } = require('./config.json');
-
+const dotenv = require('dotenv');
+dotenv.config();
 // Create a new client instance
 const client = new Client({
   intents: [
