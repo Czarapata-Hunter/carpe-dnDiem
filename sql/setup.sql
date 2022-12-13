@@ -169,26 +169,26 @@ INSERT INTO fighter (die_value, result) VALUES
 (3, 'HWAGGHHHH!'),
 (4, 'overpowered your enemy, swept the leg, and now they are prone'),
 (4, 'Slash slash! Block! Parry! SLASH SLASH!'),
-(4, ''),
-(5, ''),
-(5, ''),
-(5, '');
+(4, 'For my father, the king!'),
+(5, 'Hop step.... Decapitation! '),
+(5, 'Strike hard. Strike true'),
+(5, 'Picked a fight with the wrong champ today');
 
 
 INSERT INTO monk (die_value, result) VALUES
-(1, ''),
-(1, ''),
-(1, ''),
-(2, ''), 
+(1, 'You completely miss your Unarmed strike and manage to punch yourself square in the nose  '),
+(1, 'You are the blind monk....minus the monk part'),
+(1, 'In a show of intimidation, you fail to break the board and instead break your hand'),
+(2, 'No Punch'), 
 (2, ''),
 (2, ''),
+(3, 'Punch'),
 (3, ''),
 (3, ''),
-(3, ''),
+(4, 'Punch Punch'),
 (4, ''),
 (4, ''),
-(4, ''),
-(5, ''),
+(5, 'Punch Punch Punch Critical Punch!'),
 (5, ''),
 (5, '');
 
