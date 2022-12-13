@@ -26,7 +26,7 @@ const ROLES = {
 client.on('ready', async () => {
   console.log('Bot Is online');
   const channel = client.channels.cache.get('1052282790986661928');
-  console.log(channel);
+  console.log('channel log in role.js', channel);
   channel.send({
     content: 'Select your class by clicking on the button',
     components: [
