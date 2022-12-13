@@ -29,63 +29,63 @@ CREATE TABLE users (
 CREATE TABLE artificer(
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   die_value INTEGER NOT NULL,
-  result VARCHAR NOT NULL,
+  result VARCHAR NOT NULL
 );
 CREATE TABLE barbarian (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   die_value INTEGER NOT NULL,
-  result VARCHAR NOT NULL,
+  result VARCHAR NOT NULL
   );
 CREATE TABLE blood_hunter (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   die_value INTEGER NOT NULL,
-  result VARCHAR NOT NULL,
+  result VARCHAR NOT NULL
   );
 CREATE TABLE cleric (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   die_value INTEGER NOT NULL,
-  result VARCHAR NOT NULL,
+  result VARCHAR NOT NULL
 );
 CREATE TABLE druid (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   die_value INTEGER NOT NULL,
-  result VARCHAR NOT NULL,
+  result VARCHAR NOT NULL
 );
 CREATE TABLE monk (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   die_value INTEGER NOT NULL,
-  result VARCHAR NOT NULL,
+  result VARCHAR NOT NULL
   );
 CREATE TABLE paladin (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   die_value INTEGER NOT NULL,
-  result VARCHAR NOT NULL,
+  result VARCHAR NOT NULL
 );
 CREATE TABLE ranger (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   die_value INTEGER NOT NULL,
-  result VARCHAR NOT NULL,
+  result VARCHAR NOT NULL
 );
 CREATE TABLE sorcerer (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   die_value INTEGER NOT NULL,
-  result VARCHAR NOT NULL,
+  result VARCHAR NOT NULL
 );
 CREATE TABLE warlock (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   die_value INTEGER NOT NULL,
-  result VARCHAR NOT NULL,
+  result VARCHAR NOT NULL
 );
 CREATE TABLE warrior (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   die_value INTEGER NOT NULL,
-  result VARCHAR NOT NULL,
+  result VARCHAR NOT NULL
 );
 CREATE TABLE wizard(
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   die_value INTEGER NOT NULL,
-  result VARCHAR NOT NULL,
-); 
+  result VARCHAR NOT NULL
+);
 
 INSERT INTO barbarian (die_value, result) VALUES
 (1, 'In the midst of your rage you shrivel up and start to cry'),
@@ -101,4 +101,4 @@ INSERT INTO barbarian (die_value, result) VALUES
 (4, 'CLEAVE'),
 (5, 'Your blow dealt massive damage and everyone loves you'),
 (5, 'Your weapon is only a feathers weight on this day'),
-(5, 'Your enemies should make themselves unfindable if they wish to see tomorrow'),
+(5, 'Your enemies should make themselves unfindable if they wish to see tomorrow')
