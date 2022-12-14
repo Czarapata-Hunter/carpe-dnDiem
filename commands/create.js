@@ -8,8 +8,8 @@ const {
   //   ButtonStyle,
   //   REST,
   SlashCommandBuilder,
-  Colors,
-  Role,
+  // Colors,
+  // Role,
 } = require('discord.js');
 // const { execute } = require('./roll.js');
 // // const { GuildRoleCreate } = require('discord.js/src/util/Events.js');
