@@ -30,7 +30,7 @@ const ROLES = {
   artificer: '1052287888856973393',
   bloodHunter: '1052288416991158404',
   cleric: '1052288892662984837',
-  // monk: '1052288995213721701',
+  monk: '1052288995213721701',
   paladin: '1052289133403451392',
   sorcerer: '1052289411791990876',
   fighter: '1052289658429657229',
@@ -42,7 +42,7 @@ const ROLES = {
 client.on('ready', async () => {
   console.log('Bot Is online');
   const channel = client.channels.cache.get('1052282790986661928');
-  console.log(channel);
+  // console.log(channel);
   channel.send({
     content: 'Select your class by clicking on the button',
     components: [
