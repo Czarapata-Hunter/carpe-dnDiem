@@ -4,6 +4,7 @@
 DROP TABLE IF EXISTS users CASCADE;
 DROP TABLE IF EXISTS artificer;
 DROP TABLE IF EXISTS barbarian;
+DROP TABLE IF EXISTS bard;
 DROP TABLE IF EXISTS blood_hunter; 
 DROP TABLE IF EXISTS cleric;
 DROP TABLE IF EXISTS druid;
@@ -12,8 +13,9 @@ DROP TABLE IF EXISTS paladin;
 DROP TABLE IF EXISTS ranger; 
 DROP TABLE IF EXISTS sorcerer;
 DROP TABLE IF EXISTS warlock; 
-DROP TABLE IF EXISTS warrior; 
+DROP TABLE IF EXISTS fighter; 
 DROP TABLE IF EXISTS wizard; 
+DROP TABLE IF EXISTS rogue; 
 
 
 
@@ -36,6 +38,12 @@ CREATE TABLE barbarian (
   die_value INTEGER NOT NULL,
   result VARCHAR NOT NULL
   );
+  CREATE TABLE bard (
+  id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  die_value INTEGER NOT NULL,
+  result VARCHAR NOT NULL
+  );
+
 CREATE TABLE blood_hunter (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   die_value INTEGER NOT NULL,
@@ -66,6 +74,12 @@ CREATE TABLE ranger (
   die_value INTEGER NOT NULL,
   result VARCHAR NOT NULL
 );
+CREATE TABLE rogue (
+  id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  die_value INTEGER NOT NULL,
+  result VARCHAR NOT NULL
+  );
+
 CREATE TABLE sorcerer (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   die_value INTEGER NOT NULL,
@@ -101,7 +115,7 @@ INSERT INTO barbarian (die_value, result) VALUES
 (4, 'CLEAVE'),
 (5, 'Your blow dealt massive damage and everyone loves you'),
 (5, 'Your weapon is only a feathers weight on this day'),
-(5, 'Your enemies should make themselves unfindable if they wish to see tomorrow')
+(5, 'Your enemies should make themselves unfindable if they wish to see tomorrow');
 
 INSERT INTO bard (die_value, result) VALUES
 (1, 'bonk go to horny bard jail'),
@@ -218,7 +232,7 @@ INSERT INTO rogue (die_value, result) VALUES
 (1, 'You do the exact opposite of moving silently  '), 
 (2, 'Your attack was not quite quick enough to strike true'), 
 (3, 'It may not have been a sneak attack but it was definitely an attack'),
-(5, 'They did not see you coming and now they will never see you leave'), 
+(5, 'They did not see you coming and now they will never see you leave');
 
 
 
@@ -276,21 +290,3 @@ INSERT INTO wizard (die_value, result) VALUES
 (5, ''),
 (5, ''),
 (5, '');
-
-
-INSERT INTO warrior (die_value, result) VALUES
-(1, ''),
-(1, ''),
-(1, ''),
-(2, ''), 
-(2, ''),
-(2, ''),
-(3, ''),
-(3, ''),
-(3, ''),
-(4, ''),
-(4, ''),
-(4, ''),
-(5, ''),
-(5, ''),
-(5, 'What is best in life? To crush my enemies. To see them driven before me. To hear the lamentation of their women');
