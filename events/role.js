@@ -1,4 +1,4 @@
-const { token, clientId, guildId } = require('./config.json');
+const { token, clientId, guildId } = require('../config.json');
 
 const {
   Client,
@@ -9,8 +9,8 @@ const {
   ButtonStyle,
   REST,
 } = require('discord.js');
-// const ready = require('./events/ready.js');
-// const interactionCreate = require('./events/interactionCreate.js');
+// const ready = require('./ready.js');
+// const interactionCreate = require('./interactionCreate.js');
 // const { GuildRoleCreate } = require('discord.js/src/util/Events.js');
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
@@ -44,7 +44,7 @@ client.on('ready', async () => {
   const channel = client.channels.cache.get('1052282790986661928');
   console.log(channel);
   channel.send({
-    content: 'Select your class by clicking on any button',
+    content: 'Select your class by clicking on the button',
     components: [
       new ActionRowBuilder().setComponents(
         new ButtonBuilder()
@@ -107,18 +107,12 @@ client.on('ready', async () => {
 client.on('interactionCreate', async (interaction) => {
   if (interaction.isButton()) {
     const role = interaction.guild.roles.cache.get(ROLES[interaction.customId]);
+    console.log(interaction, '@@@@@@@@@@@@@@@@');
     if (!role)
-      return interaction.guild.roles
-        .create({
-          name: `${role.name}`,
-          reason: 'for punching',
-        })
-        .then(console.log)
-        .catch(console.error)
-        .reply({
-          content: 'Role not found, we made one for you!',
-          ephemeral: true,
-        });
+      return await interaction.reply({
+        content: 'Role not found, try using the /classes command!',
+        ephemeral: true,
+      });
 
     const hasRole = interaction.member.roles.cache.has(role.id);
     if (hasRole)
@@ -126,14 +120,14 @@ client.on('interactionCreate', async (interaction) => {
         .remove(role)
         .then((member) =>
           interaction.reply({
-            content: `${role} role was removed from ${member}`,
+            content: `${role.name} role was removed from ${member}`,
             ephemeral: true,
           })
         )
         .catch((err) => {
-          console.log(err);
+          console.log(err, '================');
           return interaction.reply({
-            content: `Something went wrong. ${role} role was not removed from you`,
+            content: `Something went wrong. ${role.name} role was not removed from you`,
             ephemeral: true,
           });
         });
@@ -146,10 +140,11 @@ client.on('interactionCreate', async (interaction) => {
             ephemeral: true,
           })
         )
+        .then(console.log(role.name, '00000000000000000000'))
         .catch((err) => {
           console.log(err);
           return interaction.reply({
-            content: `Something went wrong. ${role} role was not added to you`,
+            content: `Something went wrong. ${role.name} role was not added to you`,
             ephemeral: true,
           });
         });
@@ -163,7 +158,7 @@ async function main() {
     });
     client.login(token);
   } catch (err) {
-    console.log(err);
+    console.log(err, '++++++++++++++++++');
   }
 }
 
