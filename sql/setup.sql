@@ -196,7 +196,7 @@ INSERT INTO monk (die_value, result) VALUES
 
 INSERT INTO paladin (die_value, result) VALUES
 (1, 'You ramble on being super preachy. Nobody is impressed'),
-(1, 'I have no idea what you did but your God is not at all pleased with you today'
+(1, 'I have no idea what you did but your God is not at all pleased with you today'),
 (1, 'duty calls. not a holy one'),
 (1, 'your order has banished you'),
 (2, 'your devotion was not strong enough this day'), 
@@ -213,20 +213,30 @@ INSERT INTO paladin (die_value, result) VALUES
 (5, 'Your smite strikes true and sends the creature straight back to hell');
 
 
+INSERT INTO rogue (die_value, result) VALUES
+(1, 'Not only do you miss you also drop your dagger'),
+(1, 'You do the exact opposite of moving silently  '), 
+(2, 'Your attack was not quite quick enough to strike true'), 
+(3, 'It may not have been a sneak attack but it was definitely an attack'),
+(5, 'They did not see you coming and now they will never see you leave'), 
+
+
+
+
 INSERT INTO sorcerer (die_value, result) VALUES
-(1, ''),
-(1, ''),
-(1, ''),
-(2, ''), 
-(2, ''),
-(2, ''),
-(3, ''),
-(3, ''),
-(3, ''),
-(4, ''),
-(4, ''),
-(4, ''),
-(5, ''),
+(1, 'Genie doesnt feel like it today. DENIED'),
+(1, 'Deity requires a sacrifice of flesh.....yours'),
+(1, 'theres not enough cantrips in the world to save you right now'),
+(2, 'eldritch blast....more like limp doodle blast'), 
+(2, 'you cast thunderclap while standing on water. Whoops?'),
+(2, 'You attempt a weird spell on a mirror and it hits you instead. AHH SPIDERS!'),
+(3, 'too wrapped up in borrowed knowledge '),
+(3, 'Your find vehicle spell is a tortoise. Magical? Yes. Quick? no'),
+(3, 'I wonder how many minor illusions i can cast at one time....'),
+(4, 'Deity is in your favor today. +4 to attack'),
+(4, 'Casting Hallucinatory Terrain forces the enemy off a cliff'),
+(4, 'Those necro-skeletons are extra chatty but boy do they decimate a battlefield'),
+(5, 'Throwing the green flame blade, you cast it into the enemy, obliterating their will to live before the sword shortly returns to you'),
 (5, ''),
 (5, '');
 
@@ -283,4 +293,4 @@ INSERT INTO warrior (die_value, result) VALUES
 (4, ''),
 (5, ''),
 (5, ''),
-(5, '')
+(5, '');
