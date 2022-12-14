@@ -1,4 +1,4 @@
-const { token, clientId, guildId } = require('../config.json');
+const { token, clientId, guildId } = require('./config.json');
 
 const {
   Client,
@@ -9,9 +9,16 @@ const {
   ButtonStyle,
   REST,
 } = require('discord.js');
+// const { GuildRoleCreate } = require('discord.js/src/util/Events.js');
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 const rest = new REST({ version: '10' }).setToken(token);
+
+// GuildRoleCreate{
+//   name: 'monk',
+//   color: 255,
+// };
+// console.log(role(monk));
 
 const commands = [];
 
@@ -21,7 +28,7 @@ const ROLES = {
   artificer: '1052287888856973393',
   bloodHunter: '1052288416991158404',
   cleric: '1052288892662984837',
-  monk: '1052288995213721701',
+  // monk: '1052288995213721701',
   paladin: '1052289133403451392',
   sorcerer: '1052289411791990876',
   fighter: '1052289658429657229',
@@ -60,10 +67,10 @@ client.on('ready', async () => {
           .setStyle(ButtonStyle.Primary)
       ),
       new ActionRowBuilder().setComponents(
-        new ButtonBuilder()
-          .setCustomId('monk')
-          .setLabel('Monk')
-          .setStyle(ButtonStyle.Primary),
+        // new ButtonBuilder()
+        //   .setCustomId('monk')
+        //   .setLabel('Monk')
+        //   .setStyle(ButtonStyle.Primary),
         new ButtonBuilder()
           .setCustomId('paladin')
           .setLabel('Paladin')
