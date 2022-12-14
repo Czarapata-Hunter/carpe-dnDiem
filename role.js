@@ -1,4 +1,4 @@
-const { token, clientId, guildId } = require('../config.json');
+const { token, clientId, guildId } = require('./config.json');
 
 const {
   Client,
