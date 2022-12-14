@@ -35,7 +35,7 @@ client.on('ready', async () => {
   const channel = client.channels.cache.get('1052282790986661928');
   console.log(channel);
   channel.send({
-    content: 'Select your class by clicking on the button',
+    content: 'Select your class by clicking on any button',
     components: [
       new ActionRowBuilder().setComponents(
         new ButtonBuilder()
