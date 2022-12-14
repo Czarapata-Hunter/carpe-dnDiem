@@ -12,5 +12,6 @@ module.exports = {
     await interaction.reply(
       `${interaction.user.username} rolls with advantage! ${diceRoll} and ${diceRollAdv}! `
     );
+    
   },
 };
