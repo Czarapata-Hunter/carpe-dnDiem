@@ -180,36 +180,37 @@ INSERT INTO monk (die_value, result) VALUES
 (1, 'You are the blind monk....minus the monk part'),
 (1, 'In a show of intimidation, you fail to break the board and instead break your hand'),
 (2, 'No Punch'), 
-(2, ''),
-(2, ''),
+(2, 'Throw a kick every once in a while '),
+(2, 'you crack your knuckles and actually break something in them '),
 (3, 'Punch'),
-(3, ''),
-(3, ''),
+(3, 'Peace is tranquility'),
+(3, 'You can take em, youre just practicing zen instead'),
 (4, 'Punch Punch'),
-(4, ''),
-(4, ''),
+(4, 'Ill rip your ears off, and kiss my boot with them. Ill rip your tongue out, and eat with it'),
+(4, 'they will write legends of that strike'),
 (5, 'Punch Punch Punch Critical Punch!'),
-(5, ''),
-(5, '');
+(5, 'Rasengan!'),
+(5, '5 point palm exploding heart technique');
 
 
 
 INSERT INTO paladin (die_value, result) VALUES
-(1, ''),
-(1, ''),
-(1, ''),
-(2, ''), 
-(2, ''),
-(2, ''),
-(3, ''),
-(3, ''),
-(3, ''),
-(4, ''),
-(4, ''),
-(4, ''),
-(5, ''),
-(5, ''),
-(5, '');
+(1, 'You ramble on being super preachy. Nobody is impressed'),
+(1, 'I have no idea what you did but your God is not at all pleased with you today'
+(1, 'duty calls. not a holy one'),
+(1, 'your order has banished you'),
+(2, 'your devotion was not strong enough this day'), 
+(2, 'you cant smite an enemy you cant see'),
+(2, 'youve been outclassed by the warlock and the wizard'),
+(3, 'tea time!'),
+(3, 'so i said to go to church every 7th day and she ghosted me!'),
+(3, 'that town guard is awfully suspicious of me. better investigate that instead'),
+(4, 'by the power of the divine!'),
+(4, 'My sword is named virtue and it burns eternal!'),
+(4, 'Blade with whom I have lived, blade with whom now I die. Serve right and justice one last time. Seek one last heart of evil, still one last life of pain. Cut well old friend, and then farewell.'),
+(5, 'I am chosen by the gods to fight, I raise my shield to protect. I swing my blade to execute'),
+(5, 'I invoke my Sacred Oath'),
+(5, 'Your smite strikes true and sends the creature straight back to hell');
 
 
 INSERT INTO sorcerer (die_value, result) VALUES
