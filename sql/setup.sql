@@ -120,6 +120,22 @@ INSERT INTO bard (die_value, result) VALUES
 (5, 'please marry my daughter the dragon pleads'),
 (5, 'the crowd is enthralled and throw a festival in your honor');
 
+INSERT INTO blood_hunter (die_value, result) VALUES
+(1, 'lorem ipsum'),
+(1, 'lorem ipsum'),
+(1, 'lorem ipsum'),
+(2, 'lorem ipsum'),
+(2, 'lorem ipsum'),
+(2, 'lorem ipsum'),
+(3, 'lorem ipsum'),
+(3, 'lorem ipsum'),
+(3, 'lorem ipsum'),
+(4, 'lorem ipsum'),
+(4, 'lorem ipsum'),
+(4, 'lorem ipsum'),
+(5, 'lorem ipsum'),
+(5, 'lorem ipsum'),
+(5, 'lorem ipsum');
 
 
 INSERT INTO cleric (die_value, result) VALUES
@@ -218,7 +234,24 @@ INSERT INTO rogue (die_value, result) VALUES
 (1, 'You do the exact opposite of moving silently  '), 
 (2, 'Your attack was not quite quick enough to strike true'), 
 (3, 'It may not have been a sneak attack but it was definitely an attack'),
-(5, 'They did not see you coming and now they will never see you leave'), 
+(5, 'They did not see you coming and now they will never see you leave');
+
+INSERT INTO ranger (die_value, result) VALUES
+(1, 'LOREM IPSUM'),
+(1, 'LOREM IPSUM'),
+(1, 'LOREM IPSUM'),
+(2, 'LOREM IPSUM'), 
+(2, 'LOREM IPSUM'),
+(2, 'LOREM IPSUM'),
+(3, 'LOREM IPSUM'),
+(3, 'LOREM IPSUM'),
+(3, 'LOREM IPSUM'),
+(4, 'LOREM IPSUM'),
+(4, 'LOREM IPSUM'),
+(4, 'LOREM IPSUM'),
+(5, 'LOREM IPSUM'),
+(5, 'LOREM IPSUM'),
+(5, 'LOREM IPSUM');
 
 
 
@@ -295,20 +328,4 @@ INSERT INTO warrior (die_value, result) VALUES
 (5, 'LOREM IPSUM'),
 (5, 'What is best in life? To crush my enemies. To see them driven before me. To hear the lamentation of their women');
 
-INSERT INTO blood_hunter (die_value, result) VALUES
-(1, 'lorem ipsum'),
-(1, 'lorem ipsum'),
-(1, 'lorem ipsum'),
-(2, 'lorem ipsum'),
-(2, 'lorem ipsum'),
-(2, 'lorem ipsum'),
-(3, 'lorem ipsum'),
-(3, 'lorem ipsum'),
-(3, 'lorem ipsum'),
-(4, 'lorem ipsum'),
-(4, 'lorem ipsum'),
-(4, 'lorem ipsum'),
-(5, 'lorem ipsum'),
-(5, 'lorem ipsum'),
-(5, 'lorem ipsum'),
 
