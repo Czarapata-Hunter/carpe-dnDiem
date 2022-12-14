@@ -223,7 +223,7 @@ INSERT INTO rogue (die_value, result) VALUES
 
 
 
-INSERT INTO sorcerer (die_value, result) VALUES
+INSERT INTO warlock (die_value, result) VALUES
 (1, 'Genie doesnt feel like it today. DENIED'),
 (1, 'Deity requires a sacrifice of flesh.....yours'),
 (1, 'theres not enough cantrips in the world to save you right now'),
@@ -241,8 +241,8 @@ INSERT INTO sorcerer (die_value, result) VALUES
 (5, '');
 
 
-INSERT INTO warlock (die_value, result) VALUES
-(1, ''),
+INSERT INTO sorcerer (die_value, result) VALUES
+(1, 'the ancestors are displeased. No magic for you!'),
 (1, ''),
 (1, ''),
 (2, ''), 
@@ -293,4 +293,4 @@ INSERT INTO warrior (die_value, result) VALUES
 (4, ''),
 (5, ''),
 (5, ''),
-(5, '');
+(5, 'What is best in life? To crush my enemies. To see them driven before me. To hear the lamentation of their women');
