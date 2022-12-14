@@ -9,6 +9,8 @@ const {
   ButtonStyle,
   REST,
 } = require('discord.js');
+const ready = require('./events/ready.js');
+const interactionCreate = require('./events/interactionCreate.js');
 // const { GuildRoleCreate } = require('discord.js/src/util/Events.js');
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
@@ -67,10 +69,10 @@ client.on('ready', async () => {
           .setStyle(ButtonStyle.Primary)
       ),
       new ActionRowBuilder().setComponents(
-        // new ButtonBuilder()
-        //   .setCustomId('monk')
-        //   .setLabel('Monk')
-        //   .setStyle(ButtonStyle.Primary),
+        new ButtonBuilder()
+          .setCustomId('monk')
+          .setLabel('Monk')
+          .setStyle(ButtonStyle.Primary),
         new ButtonBuilder()
           .setCustomId('paladin')
           .setLabel('Paladin')
@@ -105,9 +107,18 @@ client.on('ready', async () => {
 client.on('interactionCreate', async (interaction) => {
   if (interaction.isButton()) {
     const role = interaction.guild.roles.cache.get(ROLES[interaction.customId]);
-
     if (!role)
-      return interaction.reply({ content: 'Role not found', emphemeral: true });
+      return interaction.guild.roles
+        .create({
+          name: `${role.name}`,
+          reason: 'for punching',
+        })
+        .then(console.log)
+        .catch(console.error)
+        .reply({
+          content: 'Role not found, we made one for you!',
+          ephemeral: true,
+        });
 
     const hasRole = interaction.member.roles.cache.has(role.id);
     if (hasRole)
@@ -116,14 +127,14 @@ client.on('interactionCreate', async (interaction) => {
         .then((member) =>
           interaction.reply({
             content: `${role} role was removed from ${member}`,
-            emphemeral: true,
+            ephemeral: true,
           })
         )
         .catch((err) => {
           console.log(err);
           return interaction.reply({
             content: `Something went wrong. ${role} role was not removed from you`,
-            emphemeral: true,
+            ephemeral: true,
           });
         });
     else
@@ -132,14 +143,14 @@ client.on('interactionCreate', async (interaction) => {
         .then((member) =>
           interaction.reply({
             content: `${role} role was added to ${member}`,
-            emphemeral: true,
+            ephemeral: true,
           })
         )
         .catch((err) => {
           console.log(err);
           return interaction.reply({
             content: `Something went wrong. ${role} role was not added to you`,
-            emphemeral: true,
+            ephemeral: true,
           });
         });
   }
