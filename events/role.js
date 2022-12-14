@@ -109,16 +109,10 @@ client.on('interactionCreate', async (interaction) => {
     const role = interaction.guild.roles.cache.get(ROLES[interaction.customId]);
     console.log(interaction, '@@@@@@@@@@@@@@@@');
     if (!role)
-      return await interaction.guild.roles.cache
-        .create({
-          name: 'new role',
-          reason: 'for punching',
-        })
-        // .catch(console.error)
-        .reply({
-          content: 'Role not found, we made one for you!',
-          ephemeral: true,
-        });
+      return await interaction.reply({
+        content: 'Role not found, try using the /classes command!',
+        ephemeral: true,
+      });
 
     const hasRole = interaction.member.roles.cache.has(role.id);
     if (hasRole)
