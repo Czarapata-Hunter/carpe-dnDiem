@@ -9,8 +9,8 @@ const {
   ButtonStyle,
   REST,
 } = require('discord.js');
-const ready = require('./events/ready.js');
-const interactionCreate = require('./events/interactionCreate.js');
+// const ready = require('./events/ready.js');
+// const interactionCreate = require('./events/interactionCreate.js');
 // const { GuildRoleCreate } = require('discord.js/src/util/Events.js');
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
