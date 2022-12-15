@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const { token, clientId, guildId } = require('../config.json');
 
 const {
@@ -9,18 +10,8 @@ const {
   ButtonStyle,
   REST,
 } = require('discord.js');
-// const ready = require('./ready.js');
-// const interactionCreate = require('./interactionCreate.js');
-// const { GuildRoleCreate } = require('discord.js/src/util/Events.js');
-
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 const rest = new REST({ version: '10' }).setToken(token);
-
-// GuildRoleCreate{
-//   name: 'monk',
-//   color: 255,
-// };
-// console.log(role(monk));
 
 const commands = [];
 
@@ -42,7 +33,6 @@ const ROLES = {
 client.on('ready', async () => {
   console.log('Bot Is online');
   const channel = client.channels.cache.get('1052675892423438339');
-  // console.log(channel);
   channel.send({
     content: 'Select your class by clicking on the button',
     components: [
@@ -107,7 +97,6 @@ client.on('ready', async () => {
 client.on('interactionCreate', async (interaction) => {
   if (interaction.isButton()) {
     const role = interaction.guild.roles.cache.get(ROLES[interaction.customId]);
-    // console.log(interaction);
     if (!role)
       return await interaction.reply({
         content: 'Role not found, try using the /classes command!',
@@ -158,7 +147,7 @@ async function main() {
     });
     client.login(token);
   } catch (err) {
-    console.log(err, '++++++++++++++++++');
+    console.log(err);
   }
 }
 
