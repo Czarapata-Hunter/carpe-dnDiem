@@ -41,7 +41,7 @@ const ROLES = {
 
 client.on('ready', async () => {
   console.log('Bot Is online');
-  const channel = client.channels.cache.get('1052282790986661928');
+  const channel = client.channels.cache.get('1052675892423438339');
   // console.log(channel);
   channel.send({
     content: 'Select your class by clicking on the button',
@@ -107,7 +107,7 @@ client.on('ready', async () => {
 client.on('interactionCreate', async (interaction) => {
   if (interaction.isButton()) {
     const role = interaction.guild.roles.cache.get(ROLES[interaction.customId]);
-    console.log(interaction, '@@@@@@@@@@@@@@@@');
+    // console.log(interaction);
     if (!role)
       return await interaction.reply({
         content: 'Role not found, try using the /classes command!',
@@ -125,7 +125,7 @@ client.on('interactionCreate', async (interaction) => {
           })
         )
         .catch((err) => {
-          console.log(err, '================');
+          console.log(err);
           return interaction.reply({
             content: `Something went wrong. ${role.name} role was not removed from you`,
             ephemeral: true,
@@ -140,7 +140,7 @@ client.on('interactionCreate', async (interaction) => {
             ephemeral: true,
           })
         )
-        .then(console.log(role.name, '00000000000000000000'))
+        .then(console.log(role.name, 'role added'))
         .catch((err) => {
           console.log(err);
           return interaction.reply({
