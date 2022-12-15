@@ -24,14 +24,15 @@ async function getDieValue(diceRoll) {
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName('test3')
-    .setDescription('Rolls a d20'),
+    .setName('Paladin')
+    .setDescription(
+      'Rolls a d20 and displays a message tailored for the chosen class'
+    ),
   async execute(interaction) {
     const diceRoll = await rollDice();
     const die_value = await getDieValue(diceRoll);
-    const role = 'cleric';
+    const role = 'paladin';
     const message = await Result.getResult(role, die_value);
-    console.log('please god', message.descriptor);
     await interaction.reply(
       `${interaction.user.username} the ${JSON.stringify(
         message.descriptor
