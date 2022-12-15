@@ -24,7 +24,7 @@ async function getDieValue(diceRoll) {
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName('Rogue')
+    .setName('rogue')
     .setDescription(
       'Rolls a d20 and displays a message tailored for the chosen class'
     ),
