@@ -1,28 +1,9 @@
-// const { token, clientId, guildId } = require('../config.json');
-const {
-  //   Client,
-  //   GatewayIntentBits,
-  //   Routes,
-  //   ActionRowBuilder,
-  //   ButtonBuilder,
-  //   ButtonStyle,
-  //   REST,
-  SlashCommandBuilder,
-  // Colors,
-  // Role,
-} = require('discord.js');
-// const { execute } = require('./roll.js');
-// // const { GuildRoleCreate } = require('discord.js/src/util/Events.js');
-// const client = new Client({ intents: [GatewayIntentBits.Guilds] });
-// const rest = new REST({ version: '10' }).setToken(token);
-// let guild = this.guildId;
+const { SlashCommandBuilder } = require('discord.js');
 module.exports = {
   data: new SlashCommandBuilder()
     .setName('classes')
     .setDescription('imports dnd classes as roles'),
   async execute(interaction) {
-    // const guild = this.guildId;
-    // const client = client.channels.create('roles');
     await interaction.guild.roles
       .create({
         name: 'monk',
@@ -121,7 +102,6 @@ module.exports = {
         reason: 'fer sneakin',
       })
       .catch(console.error);
-    //   .then(console.log(Role.monk.id))
     await interaction.reply('Youve got roles');
   },
 };
