@@ -12,10 +12,7 @@ DROP TABLE IF EXISTS paladin;
 DROP TABLE IF EXISTS ranger; 
 DROP TABLE IF EXISTS sorcerer;
 DROP TABLE IF EXISTS warlock; 
-DROP TABLE IF EXISTS warrior; 
 DROP TABLE IF EXISTS wizard; 
-
-
 
 CREATE TABLE users (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -276,21 +273,3 @@ INSERT INTO wizard (die_value, result) VALUES
 (5, ''),
 (5, ''),
 (5, '');
-
-
-INSERT INTO warrior (die_value, result) VALUES
-(1, ''),
-(1, ''),
-(1, ''),
-(2, ''), 
-(2, ''),
-(2, ''),
-(3, ''),
-(3, ''),
-(3, ''),
-(4, ''),
-(4, ''),
-(4, ''),
-(5, ''),
-(5, ''),
-(5, 'What is best in life? To crush my enemies. To see them driven before me. To hear the lamentation of their women');

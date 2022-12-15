@@ -8,6 +8,8 @@ const {
   //   ButtonStyle,
   //   REST,
   SlashCommandBuilder,
+  // ChannelType,
+  // ChannelType,
   // Colors,
   // Role,
 } = require('discord.js');
@@ -23,6 +25,12 @@ module.exports = {
   async execute(interaction) {
     // const guild = this.guildId;
     // const client = client.channels.create('roles');
+    // await interaction.client.guild.channels
+    //   .create({
+    //     name: 'Roles',
+    //     type: ChannelType.GuildAnnouncement,
+    //   })
+    //   .catch(console.error);
     await interaction.guild.roles
       .create({
         name: 'monk',
@@ -121,6 +129,10 @@ module.exports = {
         reason: 'fer sneakin',
       })
       .catch(console.error);
+    // await interaction.guild.channels._add({
+    //   name: 'Roles',
+    //   type: ChannelType.GuildAnnouncement,
+    // });
     //   .then(console.log(Role.monk.id))
     await interaction.reply('Youve got roles');
   },
