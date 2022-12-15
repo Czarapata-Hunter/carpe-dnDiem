@@ -16,18 +16,20 @@ const rest = new REST({ version: '10' }).setToken(token);
 const commands = [];
 
 const ROLES = {
-  barbarian: '1051949534156181544',
-  druid: '1051946604413845625',
-  artificer: '1052287888856973393',
-  bloodHunter: '1052288416991158404',
-  cleric: '1052288892662984837',
-  monk: '1052288995213721701',
-  paladin: '1052289133403451392',
-  sorcerer: '1052289411791990876',
-  fighter: '1052289658429657229',
-  warlock: '1052289828579987476',
-  ranger: '1052289969521184790',
-  wizard: '1052290146982187149',
+  barbarian: '1053087504372338748',
+  druid: '1053087508658933942',
+  bard: '1053087506435952720',
+  artificer: '1053087505769041960',
+  bloodHunter: '1053087506901512233',
+  cleric: '1053087507891376158',
+  monk: '1053087500928831559',
+  paladin: '1053087646869635122',
+  sorcerer: '1053087505085378570',
+  fighter: '1053087503608983582',
+  warlock: '1053087512366682142',
+  ranger: '1053087510235987968',
+  wizard: '1053087502312943738',
+  rogue: '1053087511192272926',
 };
 
 client.on('ready', async () => {
@@ -88,6 +90,14 @@ client.on('ready', async () => {
         new ButtonBuilder()
           .setCustomId('wizard')
           .setLabel('Wizard')
+          .setStyle(ButtonStyle.Primary),
+        new ButtonBuilder()
+          .setCustomId('rogue')
+          .setLabel('Rogue')
+          .setStyle(ButtonStyle.Primary),
+        new ButtonBuilder()
+          .setCustomId('bard')
+          .setLabel('Bard')
           .setStyle(ButtonStyle.Primary)
       ),
     ],
