@@ -2,7 +2,7 @@ const { SlashCommandBuilder } = require('discord.js');
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName('disadvantage')
+    .setName('_disadvantage')
     .setDescription('gives the user disadvantage'),
   async execute(interaction) {
     const diceRoll = Math.ceil(Math.random() * 20);
