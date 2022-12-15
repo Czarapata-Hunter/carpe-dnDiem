@@ -4,7 +4,7 @@
 DROP TABLE IF EXISTS artificer;
 DROP TABLE IF EXISTS barbarian;
 DROP TABLE IF EXISTS bard;
-DROP TABLE IF EXISTS blood_hunter; 
+DROP TABLE IF EXISTS bloodhunter; 
 DROP TABLE IF EXISTS cleric;
 DROP TABLE IF EXISTS druid;
 DROP TABLE IF EXISTS fighter;
@@ -37,7 +37,7 @@ CREATE TABLE barbarian (
   result VARCHAR NOT NULL
   );
 
-CREATE TABLE blood_hunter (
+CREATE TABLE bloodhunter (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   die_value INTEGER NOT NULL,
   descriptor VARCHAR NOT NULL,
@@ -162,7 +162,7 @@ INSERT INTO bard (die_value, descriptor, result) VALUES
 (5, 'exemplary', 'please marry my daughter the dragon pleads'),
 (5, 'exemplary', 'the crowd is enthralled and throw a festival in your honor');
 
-INSERT INTO blood_hunter (die_value, descriptor, result) VALUES
+INSERT INTO bloodhunter (die_value, descriptor, result) VALUES
 (1, 'terrible', 'In your attempt to Crimson Rite your weapon you somehow fail and now just have a cut that stings'),
 (1, 'terrible', 'It blows my mind that you even survived your Hunters Bane'),
 (1, 'terrible', 'I have seen baby penguins who could pick up a blood scent better than you'),
