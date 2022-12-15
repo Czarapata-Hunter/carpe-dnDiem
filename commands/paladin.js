@@ -9,8 +9,8 @@ module.exports = {
       'Rolls a d20 and displays a message tailored for the chosen class'
     ),
   async execute(interaction) {
-    const diceRoll = await rollDice();
-    const die_value = await getDieValue(diceRoll);
+    const diceRoll = rollDice();
+    const die_value = getDieValue(diceRoll);
     const role = 'paladin';
     const message = await Result.getResult(role, die_value);
     await interaction.reply(
