@@ -13,9 +13,8 @@ DROP TABLE IF EXISTS paladin;
 DROP TABLE IF EXISTS ranger; 
 DROP TABLE IF EXISTS sorcerer;
 DROP TABLE IF EXISTS warlock; 
-DROP TABLE IF EXISTS fighter; 
+DROP TABLE IF EXISTS warrior; 
 DROP TABLE IF EXISTS wizard; 
-DROP TABLE IF EXISTS rogue; 
 
 
 
@@ -27,7 +26,23 @@ CREATE TABLE users (
   last_name VARCHAR NOT NULL
 );
 
+CREATE TABLE warrior (
+  id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  die_value INTEGER NOT NULL,
+  result VARCHAR NOT NULL
+);
 
+CREATE TABLE rogue (
+  id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  die_value INTEGER NOT NULL,
+  result VARCHAR NOT NULL
+);
+
+CREATE TABLE bard (
+  id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  die_value INTEGER NOT NULL,
+  result VARCHAR NOT NULL
+);
 CREATE TABLE artificer(
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   die_value INTEGER NOT NULL,
@@ -148,6 +163,22 @@ INSERT INTO bard (die_value, descriptor, result) VALUES
 (5, 'exemplary', 'please marry my daughter the dragon pleads'),
 (5, 'exemplary', 'the crowd is enthralled and throw a festival in your honor');
 
+INSERT INTO blood_hunter (die_value, result) VALUES
+(1, 'lorem ipsum'),
+(1, 'lorem ipsum'),
+(1, 'lorem ipsum'),
+(2, 'lorem ipsum'),
+(2, 'lorem ipsum'),
+(2, 'lorem ipsum'),
+(3, 'lorem ipsum'),
+(3, 'lorem ipsum'),
+(3, 'lorem ipsum'),
+(4, 'lorem ipsum'),
+(4, 'lorem ipsum'),
+(4, 'lorem ipsum'),
+(5, 'lorem ipsum'),
+(5, 'lorem ipsum'),
+(5, 'lorem ipsum');
 
 
 INSERT INTO cleric (die_value, descriptor, result) VALUES
