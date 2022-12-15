@@ -16,9 +16,9 @@ Login to your Discord account like normal and invite CarpeDnDiem to your server
 
 1. Dice Rolling
 
-   - /\_rolld20 rolls a d20
-   - /\_advantage rolls 2 d20's with advantage
-   - /\_disadvantage rolls 2 d20's with disadvantage
+   - /\_rolld20 - rolls a d20
+   - /\_advantage - rolls 2 d20's with advantage
+   - /\_disadvantage - rolls 2 d20's with disadvantage
 
 1. Fortunes
 
