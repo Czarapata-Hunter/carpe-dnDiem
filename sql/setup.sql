@@ -4,6 +4,7 @@
 DROP TABLE IF EXISTS users CASCADE;
 DROP TABLE IF EXISTS artificer;
 DROP TABLE IF EXISTS barbarian;
+DROP TABLE IF EXISTS bard;
 DROP TABLE IF EXISTS blood_hunter; 
 DROP TABLE IF EXISTS cleric;
 DROP TABLE IF EXISTS druid;
@@ -12,11 +13,8 @@ DROP TABLE IF EXISTS paladin;
 DROP TABLE IF EXISTS ranger; 
 DROP TABLE IF EXISTS sorcerer;
 DROP TABLE IF EXISTS warlock; 
-DROP TABLE IF EXISTS fighter; 
-DROP TABLE IF EXISTS wizard; 
-DROP TABLE IF EXISTS bard; 
-DROP TABLE IF EXISTS rogue; 
 DROP TABLE IF EXISTS warrior; 
+DROP TABLE IF EXISTS wizard; 
 
 
 
@@ -55,6 +53,12 @@ CREATE TABLE barbarian (
   die_value INTEGER NOT NULL,
   result VARCHAR NOT NULL
   );
+  CREATE TABLE bard (
+  id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  die_value INTEGER NOT NULL,
+  result VARCHAR NOT NULL
+  );
+
 CREATE TABLE blood_hunter (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   die_value INTEGER NOT NULL,
@@ -63,6 +67,7 @@ CREATE TABLE blood_hunter (
 CREATE TABLE cleric (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   die_value INTEGER NOT NULL,
+  descriptor VARCHAR NOT NULL,
   result VARCHAR NOT NULL
 );
 CREATE TABLE druid (
@@ -85,6 +90,12 @@ CREATE TABLE ranger (
   die_value INTEGER NOT NULL,
   result VARCHAR NOT NULL
 );
+CREATE TABLE rogue (
+  id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  die_value INTEGER NOT NULL,
+  result VARCHAR NOT NULL
+  );
+
 CREATE TABLE sorcerer (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   die_value INTEGER NOT NULL,
@@ -157,22 +168,22 @@ INSERT INTO blood_hunter (die_value, result) VALUES
 (5, 'lorem ipsum');
 
 
-INSERT INTO cleric (die_value, result) VALUES
-(1, 'Your god hears you they just do not care'),
-(1, 'Holy Symbol disintegrates in your hand'),
-(1, 'After 20 minutes of concentration, your focus breaks and you lose the blessing of your god'),
-(2, 'You are not bad you are just bad at it'), 
-(2, 'Should have prayed harder'),
-(2, 'Prayed to the wrong deity'),
-(3, 'Your healing spell goes off without a hitch but it isnt very effective'),
-(3, 'out of spell slots. rest up and try again'),
-(3, 'missed attack wtih mace'),
-(4, 'Sing a hymn so beautiful your god cries'),
-(4, 'theyre going to need a stronger attack to get through your AC'),
-(4, 'your secret order grants you one treasure'),
-(5, 'your secret order grants your party each one treasure'),
-(5, 'You cast cure mod but the effects match cure serious instead'),
-(5, 'With your god guiding you your foes are laid to waste at your feet');
+INSERT INTO cleric (die_value, descriptor, result) VALUES
+(1, 'absolute dog-shit', 'Your god hears you they just do not care'),
+(1, 'absolute dog-shit', 'Holy Symbol disintegrates in your hand'),
+(1, 'absolute dog-shit', 'After 20 minutes of concentration, your focus breaks and you lose the blessing of your god'),
+(2, 'mediocre', 'You are not bad you are just bad at it'), 
+(2, 'mediocre', 'Should have prayed harder'),
+(2, 'mediocre', 'Prayed to the wrong deity'),
+(3, 'great', 'Your healing spell goes off without a hitch but it isnt very effective'),
+(3, 'great', 'out of spell slots. rest up and try again'),
+(3, 'great', 'missed attack wtih mace'),
+(4, 'superb', 'Sing a hymn so beautiful your god cries'),
+(4, 'superb', 'theyre going to need a stronger attack to get through your AC'),
+(4, 'superb', 'your secret order grants you one treasure'),
+(5, 'exemplary', 'your secret order grants your party each one treasure'),
+(5, 'exemplary', 'You cast cure mod but the effects match cure serious instead'),
+(5, 'exemplary', 'With your god guiding you your foes are laid to waste at your feet');
 
 
 INSERT INTO druid (die_value, result) VALUES
@@ -253,24 +264,7 @@ INSERT INTO rogue (die_value, result) VALUES
 (1, 'You do the exact opposite of moving silently  '), 
 (2, 'Your attack was not quite quick enough to strike true'), 
 (3, 'It may not have been a sneak attack but it was definitely an attack'),
-(5, 'They did not see you coming and now they will never see you leave');
-
-INSERT INTO ranger (die_value, result) VALUES
-(1, 'LOREM IPSUM'),
-(1, 'LOREM IPSUM'),
-(1, 'LOREM IPSUM'),
-(2, 'LOREM IPSUM'), 
-(2, 'LOREM IPSUM'),
-(2, 'LOREM IPSUM'),
-(3, 'LOREM IPSUM'),
-(3, 'LOREM IPSUM'),
-(3, 'LOREM IPSUM'),
-(4, 'LOREM IPSUM'),
-(4, 'LOREM IPSUM'),
-(4, 'LOREM IPSUM'),
-(5, 'LOREM IPSUM'),
-(5, 'LOREM IPSUM'),
-(5, 'LOREM IPSUM');
+(5, 'They did not see you coming and now they will never see you leave'), 
 
 
 
@@ -331,20 +325,18 @@ INSERT INTO wizard (die_value, result) VALUES
 
 
 INSERT INTO warrior (die_value, result) VALUES
-(1, 'LOREM IPSUM'),
-(1, 'LOREM IPSUM'),
-(1, 'LOREM IPSUM'),
-(2, 'LOREM IPSUM'), 
-(2, 'LOREM IPSUM'),
-(2, 'LOREM IPSUM'),
-(3, 'LOREM IPSUM'),
-(3, 'LOREM IPSUM'),
-(3, 'LOREM IPSUM'),
-(4, 'LOREM IPSUM'),
-(4, 'LOREM IPSUM'),
-(4, 'LOREM IPSUM'),
-(5, 'LOREM IPSUM'),
-(5, 'LOREM IPSUM'),
+(1, ''),
+(1, ''),
+(1, ''),
+(2, ''), 
+(2, ''),
+(2, ''),
+(3, ''),
+(3, ''),
+(3, ''),
+(4, ''),
+(4, ''),
+(4, ''),
+(5, ''),
+(5, ''),
 (5, 'What is best in life? To crush my enemies. To see them driven before me. To hear the lamentation of their women');
-
-
