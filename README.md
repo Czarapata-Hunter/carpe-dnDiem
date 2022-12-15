@@ -1,7 +1,7 @@
 # CarpeDnDiem
 
-`Set your role to your favorite Dungeons & Dragons class in your Discord server!`
-`Roll a d20 to receive a fortune based on the success or failure of the roll.`
+<p>`Set your role to your favorite Dungeons & Dragons class in your Discord server!`<br>
+`Roll a d20 to receive a fortune based on the success or failure of the roll.`</p>
 
 ## Setup
 
