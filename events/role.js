@@ -32,7 +32,7 @@ const ROLES = {
 
 client.on('ready', async () => {
   console.log('Bot Is online');
-  const channel = client.channels.cache.get('1052675892423438339');
+  const channel = client.channels.cache.get('1052282790986661928');
   channel.send({
     content: 'Select your class by clicking on the button',
     components: [
