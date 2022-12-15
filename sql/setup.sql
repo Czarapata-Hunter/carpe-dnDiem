@@ -52,6 +52,7 @@ CREATE TABLE blood_hunter (
 CREATE TABLE cleric (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   die_value INTEGER NOT NULL,
+  descriptor VARCHAR NOT NULL,
   result VARCHAR NOT NULL
 );
 CREATE TABLE druid (
@@ -136,22 +137,22 @@ INSERT INTO bard (die_value, result) VALUES
 
 
 
-INSERT INTO cleric (die_value, result) VALUES
-(1, 'Your god hears you they just do not care'),
-(1, 'Holy Symbol disintegrates in your hand'),
-(1, 'After 20 minutes of concentration, your focus breaks and you lose the blessing of your god'),
-(2, 'You are not bad you are just bad at it'), 
-(2, 'Should have prayed harder'),
-(2, 'Prayed to the wrong deity'),
-(3, 'Your healing spell goes off without a hitch but it isnt very effective'),
-(3, 'out of spell slots. rest up and try again'),
-(3, 'missed attack wtih mace'),
-(4, 'Sing a hymn so beautiful your god cries'),
-(4, 'theyre going to need a stronger attack to get through your AC'),
-(4, 'your secret order grants you one treasure'),
-(5, 'your secret order grants your party each one treasure'),
-(5, 'You cast cure mod but the effects match cure serious instead'),
-(5, 'With your god guiding you your foes are laid to waste at your feet');
+INSERT INTO cleric (die_value, descriptor, result) VALUES
+(1, 'absolute dog-shit', 'Your god hears you they just do not care'),
+(1, 'absolute dog-shit', 'Holy Symbol disintegrates in your hand'),
+(1, 'absolute dog-shit', 'After 20 minutes of concentration, your focus breaks and you lose the blessing of your god'),
+(2, 'mediocre', 'You are not bad you are just bad at it'), 
+(2, 'mediocre', 'Should have prayed harder'),
+(2, 'mediocre', 'Prayed to the wrong deity'),
+(3, 'great', 'Your healing spell goes off without a hitch but it isnt very effective'),
+(3, 'great', 'out of spell slots. rest up and try again'),
+(3, 'great', 'missed attack wtih mace'),
+(4, 'superb', 'Sing a hymn so beautiful your god cries'),
+(4, 'superb', 'theyre going to need a stronger attack to get through your AC'),
+(4, 'superb', 'your secret order grants you one treasure'),
+(5, 'exemplary', 'your secret order grants your party each one treasure'),
+(5, 'exemplary', 'You cast cure mod but the effects match cure serious instead'),
+(5, 'exemplary', 'With your god guiding you your foes are laid to waste at your feet');
 
 
 INSERT INTO druid (die_value, result) VALUES
@@ -290,3 +291,4 @@ INSERT INTO wizard (die_value, result) VALUES
 (5, ''),
 (5, ''),
 (5, '');
+

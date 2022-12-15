@@ -23,19 +23,19 @@ async function getDieValue(diceRoll) {
 }
 
 module.exports = {
-  data: new SlashCommandBuilder().setName('test').setDescription('Rolls a d20'),
+  data: new SlashCommandBuilder()
+    .setName('test3')
+    .setDescription('Rolls a d20'),
   async execute(interaction) {
     const diceRoll = await rollDice();
     const die_value = await getDieValue(diceRoll);
-    // console.log('find die value', die_value);
     const role = 'cleric';
-    // console.log('role the roll for your role', interaction.role);
     const message = await Result.getResult(role, die_value);
-    // console.log('please god', result);
+    console.log('please god', message.descriptor);
     await interaction.reply(
-      `${
-        interaction.user.username
-      } rolled a ${diceRoll} and received the message ${JSON.stringify(
+      `${interaction.user.username} the ${JSON.stringify(
+        message.descriptor
+      )} ${role} rolled a ${diceRoll} and received the message ${JSON.stringify(
         message.result
       )}`
     );
