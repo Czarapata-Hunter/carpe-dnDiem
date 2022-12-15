@@ -3,6 +3,10 @@ const Result = require('../lib/models/Result.js');
 
 async function rollDice() {
   const diceRoll = Math.ceil(Math.random() * 20);
+  return diceRoll;
+}
+
+async function getDieValue(diceRoll) {
   let die_value;
   if (diceRoll === 1) {
     return (die_value = 1);
@@ -15,13 +19,14 @@ async function rollDice() {
   } else if (diceRoll === 20) {
     return (die_value = 5);
   }
-  return { die_value, diceRoll };
+  return die_value;
 }
 
 module.exports = {
   data: new SlashCommandBuilder().setName('test').setDescription('Rolls a d20'),
   async execute(interaction) {
-    const { die_value, diceRoll } = await rollDice();
+    const diceRoll = await rollDice();
+    const die_value = await getDieValue(diceRoll);
     // console.log('find die value', die_value);
     const role = 'cleric';
     // console.log('role the roll for your role', interaction.role);
@@ -30,7 +35,9 @@ module.exports = {
     await interaction.reply(
       `${
         interaction.user.username
-      } rolled a ${diceRoll} and received the ${JSON.stringify(message.result)}`
+      } rolled a ${diceRoll} and received the message ${JSON.stringify(
+        message.result
+      )}`
     );
   },
 };

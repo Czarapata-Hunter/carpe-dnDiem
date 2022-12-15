@@ -2,7 +2,7 @@ const pool = require('../lib/utils/pool');
 const setup = require('../data/setup');
 const Result = require('../lib/models/Result');
 
-describe('backend random result', () => {
+describe.skip('backend random result', () => {
   beforeEach(() => {
     return setup(pool);
   });
