@@ -10,9 +10,7 @@ Login to your Discord account like normal and invite CarpeDnDiem to your server
 
 1. Role Creation
 
-   - /classes
-   - a one time command that populates the server with 14 class-based roles
-   - includes a custom color for each role/class
+   - /classes - a one time command that populates the server with 14 class-based roles including a custom color for each role/class
 
 1. Dice Rolling
 
