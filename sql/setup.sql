@@ -12,8 +12,11 @@ DROP TABLE IF EXISTS paladin;
 DROP TABLE IF EXISTS ranger; 
 DROP TABLE IF EXISTS sorcerer;
 DROP TABLE IF EXISTS warlock; 
-DROP TABLE IF EXISTS warrior; 
+DROP TABLE IF EXISTS fighter; 
 DROP TABLE IF EXISTS wizard; 
+DROP TABLE IF EXISTS bard; 
+DROP TABLE IF EXISTS rogue; 
+DROP TABLE IF EXISTS warrior; 
 
 
 
@@ -25,7 +28,23 @@ CREATE TABLE users (
   last_name VARCHAR NOT NULL
 );
 
+CREATE TABLE warrior (
+  id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  die_value INTEGER NOT NULL,
+  result VARCHAR NOT NULL
+);
 
+CREATE TABLE rogue (
+  id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  die_value INTEGER NOT NULL,
+  result VARCHAR NOT NULL
+);
+
+CREATE TABLE bard (
+  id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  die_value INTEGER NOT NULL,
+  result VARCHAR NOT NULL
+);
 CREATE TABLE artificer(
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   die_value INTEGER NOT NULL,
@@ -101,7 +120,7 @@ INSERT INTO barbarian (die_value, result) VALUES
 (4, 'CLEAVE'),
 (5, 'Your blow dealt massive damage and everyone loves you'),
 (5, 'Your weapon is only a feathers weight on this day'),
-(5, 'Your enemies should make themselves unfindable if they wish to see tomorrow')
+(5, 'Your enemies should make themselves unfindable if they wish to see tomorrow');
 
 INSERT INTO bard (die_value, result) VALUES
 (1, 'bonk go to horny bard jail'),
