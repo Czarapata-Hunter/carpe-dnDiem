@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const ROLES = {
   barbarian: '1053087504372338748',
   druid: '1053087508658933942',
@@ -19,47 +20,49 @@ module.exports = {
   name: 'interactionCreate',
   async execute(interaction) {
     if (interaction.isButton()) {
-    const role = interaction.guild.roles.cache.get(ROLES[interaction.customId]);
-    if (!role)
-      return await interaction.reply({
-        content: 'Role not found, try using the /classes command!',
-        ephemeral: true,
-      });
+      const role = interaction.guild.roles.cache.get(
+        ROLES[interaction.customId]
+      );
+      if (!role)
+        return await interaction.reply({
+          content: 'Role not found, try using the /classes command!',
+          ephemeral: true,
+        });
 
-    const hasRole = interaction.member.roles.cache.has(role.id);
-    if (hasRole)
-      return interaction.member.roles
-        .remove(role)
-        .then((member) =>
-          interaction.reply({
-            content: `${role.name} role was removed from ${member}`,
-            ephemeral: true,
-          })
-        )
-        .catch((err) => {
-          console.log(err);
-          return interaction.reply({
-            content: `Something went wrong. ${role.name} role was not removed from you`,
-            ephemeral: true,
+      const hasRole = interaction.member.roles.cache.has(role.id);
+      if (hasRole)
+        return interaction.member.roles
+          .remove(role)
+          .then((member) =>
+            interaction.reply({
+              content: `${role.name} role was removed from ${member}`,
+              ephemeral: true,
+            })
+          )
+          .catch((err) => {
+            console.log(err);
+            return interaction.reply({
+              content: `Something went wrong. ${role.name} role was not removed from you`,
+              ephemeral: true,
+            });
           });
-        });
-    else
-      return interaction.member.roles
-        .add(role)
-        .then((member) =>
-          interaction.reply({
-            content: `${role} role was added to ${member}`,
-            ephemeral: true,
-          })
-        )
-        .then(console.log(role.name, 'role added'))
-        .catch((err) => {
-          console.log(err);
-          return interaction.reply({
-            content: `Something went wrong. ${role.name} role was not added to you`,
-            ephemeral: true,
+      else
+        return interaction.member.roles
+          .add(role)
+          .then((member) =>
+            interaction.reply({
+              content: `${role} role was added to ${member}`,
+              ephemeral: true,
+            })
+          )
+          .then(console.log(role.name, 'role added'))
+          .catch((err) => {
+            console.log(err);
+            return interaction.reply({
+              content: `Something went wrong. ${role.name} role was not added to you`,
+              ephemeral: true,
+            });
           });
-        });
-  }
-  }
-}
+    }
+  },
+};
