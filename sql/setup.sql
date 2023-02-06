@@ -1,4 +1,3 @@
-
 -- Use this file to define your SQL tables
 -- The SQL in this file will be executed when you run `npm run setup-db`
 DROP TABLE IF EXISTS artificer;
@@ -352,7 +351,6 @@ INSERT INTO wizard (die_value, descriptor, result) VALUES
 (5, 'exemplary', 'Flameo, my good hotman. It is a good day for Fireball.'),
 (5, 'exemplary', 'You are not just an old geezer. You are a magic geezer!'),
 (5, 'exemplary', 'Double your productivity. Haste and Time Stop will really make you stand out.');
-
 
 
 
